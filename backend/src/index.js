@@ -13,6 +13,11 @@ app.use(morgan('dev'))
 //app.use(bodyparser.json())
 app.use(express.json())
 
+//rutas
+
+app.use('/api/',require('./routes/prueba.route'))
+
+
 app.listen(app.get('Port'),()=>{
     console.log('escuchando por el puerto ',app.get('Port'))
 })
